@@ -20,7 +20,7 @@ public class Agenda implements InterfaceAgenda {
 
     public void agenda() {
 
-        Contato ex1 = new Contato("Fabio", 961819759);
+        Contato ex1 = new Contato("Fabio", 932322232);
         listaContatos.add(ex1);
         Contato ex2 = new Contato("Amanda", 11111111);
         listaContatos.add(ex2);
@@ -46,7 +46,7 @@ public class Agenda implements InterfaceAgenda {
         listaContatos.add(ex12);
         Contato ex13 = new Contato("Ze", 87654321);
         listaContatos.add(ex13);
-        Contato ex14 = new Contato("*@#&¨!", 40028922);
+        Contato ex14 = new Contato("*@#&Â¨!", 40028922);
         listaContatos.add(ex14);
         Contato ex15 = new Contato("Luiza", 931313131);
         listaContatos.add(ex15);
@@ -65,7 +65,7 @@ public class Agenda implements InterfaceAgenda {
             }
 
             System.out.println("""
-                               Opções:
+                               OpÃ§Ãµes:
                                1 - Adicionar contato
                                2 - Remover contato
                                3 - Editar contato
@@ -109,12 +109,12 @@ public class Agenda implements InterfaceAgenda {
                 }
             }
             while (e1) {
-                System.out.println("\nDigite o número do novo contato");
+                System.out.println("\nDigite o nÃºmero do novo contato");
                 int numeroContato = scan.nextInt();
                 scan.nextLine();
                 for (int i = 0; i < listaContatos.size(); i++) {
                     if (numeroContato == listaContatos.get(i).getNumero()) {
-                        System.out.println("Esse número ja existe");
+                        System.out.println("Esse nÃºmero ja existe");
                         e2 = false;
                         break;
                     } else {
@@ -146,7 +146,7 @@ public class Agenda implements InterfaceAgenda {
                 break;
             } else {
                 if (i == listaContatos.size() - 1) {
-                    System.out.println("Nome de usuário não encontrado");
+                    System.out.println("Nome de usuÃ¡rio nÃ£o encontrado");
                     System.out.println("Digite 1 para continuar");
                     scan.nextLine();
                 }
@@ -167,7 +167,7 @@ public class Agenda implements InterfaceAgenda {
                 break;
             } else {
                 if (i == listaContatos.size() - 1) {
-                    System.out.println("Nome de usuário não encontrado");
+                    System.out.println("Nome de usuÃ¡rio nÃ£o encontrado");
                     System.out.println("Digite 1 para continuar");
                     scan.nextLine();
                 }
@@ -178,7 +178,7 @@ public class Agenda implements InterfaceAgenda {
     @Override
     public void procurarNumContato() {
         System.out.println(" - Procurar contato - ");
-        System.out.println("Digite o número do contato");
+        System.out.println("Digite o nÃºmero do contato");
         int procuraNumero = scan.nextInt();
         scan.nextLine();
         for (int i = 0; i < listaContatos.size(); i++) {
@@ -189,7 +189,7 @@ public class Agenda implements InterfaceAgenda {
                 break;
             } else {
                 if (i == listaContatos.size() - 1) {
-                    System.out.println("Número de usuário não encontrado");
+                    System.out.println("NÃºmero de usuÃ¡rio nÃ£o encontrado");
                     System.out.println("Digite 1 para continuar");
                     scan.nextLine();
                 }
@@ -208,7 +208,7 @@ public class Agenda implements InterfaceAgenda {
                                    
                                    Editar:
                                    1 - Nome
-                                   2 - Número
+                                   2 - NÃºmero
                                    3 - Cancelar
                                    """);
                 int n2 = scan.nextInt();
@@ -240,20 +240,20 @@ public class Agenda implements InterfaceAgenda {
                         boolean erro2 = true;
                         boolean erro3 = true;
                         while (erro2) {
-                            System.out.println("Mudar número de " + listaContatos.get(i).getNumero() + " para:");
+                            System.out.println("Mudar nÃºmero de " + listaContatos.get(i).getNumero() + " para:");
                             int novoNumero = scan.nextInt();
                             scan.nextLine();
                             for (int k = 0; k < listaContatos.size(); k++) {
                                 erro3 = true;
                                 if (novoNumero == listaContatos.get(k).getNumero()) {
-                                    System.out.println("Esse número já existe");
+                                    System.out.println("Esse nÃºmero jÃ¡ existe");
                                     erro3 = false;
                                     break;
                                 }
                             }
                             if (erro3) {
                                 listaContatos.get(i).setNumero(novoNumero);
-                                System.out.println("Número alterado para " + listaContatos.get(i).getNumero());
+                                System.out.println("NÃºmero alterado para " + listaContatos.get(i).getNumero());
                                 erro2 = false;
                             }
                         }
@@ -266,7 +266,7 @@ public class Agenda implements InterfaceAgenda {
                 break;
             } else {
                 if (i == listaContatos.size() - 1) {
-                    System.out.println("Nome de usuário não encontrado");
+                    System.out.println("Nome de usuÃ¡rio nÃ£o encontrado");
                     System.out.println("Digite 1 para continuar");
                     scan.nextLine();
                     break;
